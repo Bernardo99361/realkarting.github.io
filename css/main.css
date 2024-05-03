@@ -1,0 +1,756 @@
+/*Tipografías*/
+@font-face {
+	font-family: 'texto';
+	src: url(./fonts/Arial.woff) format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'titulo';
+	src: url(./fonts/arial-black.woff) format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'texto', sans-serif;
+}
+@media only screen and (max-width: 767px) {
+	body {
+		width: 100vw;
+	}
+}
+@media only screen and (max-width: 479px) {
+	body {
+		width: 100vw;
+	}
+}
+
+/*Header*/
+header {
+	margin: 0;
+	padding: 5px 0 0 0;
+	background-color: rgba(24, 42, 75, 1.0);
+	position: fixed;
+	top: 0;
+	right: 0;
+	left: 0;
+	width: 100%;
+	height: 90px;
+	z-index: 1;
+}
+
+.container {
+	width: 100%;
+}
+
+img.logo {
+	width: 80px;
+	position: fixed;
+}
+
+/* menu hamburguesa barra superior */
+.hamburger {
+	position: fixed;
+	right: 10px;
+	top: 30px;
+	height: 30px;
+	width: 30px;
+	-webkit-transform: translate3d(0, 0, 0);
+	transform: translate3d(0, 0, 0);
+	-webkit-transition: -webkit-transform 0.25s cubic-bezier(0.05, 1.04, 0.72, 0.98);
+	transition: transform 0.25s cubic-bezier(0.05, 1.04, 0.72, 0.98);
+	z-index: 1002;
+	cursor: pointer;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none
+}
+
+.hamburger.is-active {
+	background-color: none;
+}
+
+._layer {
+	background: rgb(250 205 52);
+	margin-bottom: 4px;
+	border-radius: 2px;
+	width: 28px;
+	height: 4px;
+	opacity: 1;
+}
+
+.hamburger:hover .-top {
+	-webkit-transform: translateY(-100%);
+	-ms-transform: translateY(-100%);
+	transform: translateY(-100%);
+}
+
+.hamburger:hover .-bottom {
+	-webkit-transform: translateY(50%);
+	-ms-transform: translateY(100%);
+	transform: translateY(100%);
+}
+
+.hamburger.is-active .-top {
+	-webkit-transform: translateY(200%) rotate(45deg) !important;
+	-ms-transform: translateY(200%) rotate(45deg) !important;
+	transform: translateY(200%) rotate(45deg) !important;
+}
+
+.hamburger.is-active .-mid {
+	opacity: 0;
+}
+
+.hamburger.is-active .-bottom {
+	-webkit-transform: translateY(-200%) rotate(135deg) !important;
+	-ms-transform: translateY(-200%) rotate(135deg) !important;
+	transform: translateY(-200%) rotate(135deg) !important;
+}
+
+.menu.is_active {
+	transform: translate3d(0px, 0px, 0px);
+}
+
+.menu {
+	background-color: rgba(131, 124, 124, 0.9);
+	bottom: 0;
+	height: 100%;
+	left: 0;
+	overflow-y: scroll;
+	position: fixed;
+	top: 0;
+	transform: translate3d(0px, -100%, 0px);
+	transition: transform 0.35s cubic-bezier(0.05, 1.04, 0.72, 0.98) 0s;
+	width: 100%;
+	z-index: 1;
+}
+
+a.anchor {
+	display: block;
+	position: relative;
+	top: -250px;
+	visibility: hidden;
+}
+
+.menu ul li {
+	list-style: none;
+	text-align: center;
+	font-size: 1em;
+	line-height: 500px;
+	height: 60px;
+	font-weight: bold;
+	z-index: 4;
+}
+
+.menu ul li a {
+	text-decoration: none;
+	color: rgb(250, 206, 62);
+}
+
+
+
+
+
+/* Secciones */
+section {
+	position: relative;
+	top: 80px;
+	padding: 10px 0;
+	line-height: 25px;
+
+}
+
+section img.empresakarting {
+	width: 100%;
+	height: 300px;
+	object-fit: cover;
+}
+
+.empresakarting {
+	height: 300px;
+	width: 100%;
+	overflow: hidden;
+}
+
+h2 {
+	text-align: center;
+	font-family: titulo, sans-serif;
+	margin: 10px 0 15px 0;
+}
+
+
+
+/* pagina principal*/
+
+/* historia*/
+.Historia {
+	text-align: center;
+	width: 100vw;
+}
+
+.Historia p {
+	margin-right: 25vw;
+	margin-left: 25vw;
+}
+/*
+div.imagen-historia img {
+	width: 100%;
+	height: 300px;
+	object-fit: cover;
+	margin: auto;
+	display: block;
+}
+*/
+.imagen-historia {
+	width: 70%;
+	object-fit: cover;
+	margin: auto;
+	display: block;
+}
+
+@media only screen and (max-width: 767px) {
+	.Historia p {
+		margin-right: 5vw;
+		margin-left: 5vw;
+	}
+	.imagen-historia {
+		width: 80%;
+		object-fit: cover;
+		margin: auto;
+		display: block;
+	}
+}
+@media only screen and (max-width: 479px) {
+	.Historia p {
+		margin-right: 2vw;
+		margin-left: 2vw;
+	}
+	.imagen-historia {
+		width: 100%;
+		object-fit: cover;
+		margin: auto;
+		display: block;
+	}
+}
+
+.tarifas-link {
+	border-top-left-radius: 5em;
+	border-top-right-radius: 5em;
+	border-bottom-right-radius: 5em;
+	border-bottom-left-radius: 5em;
+}
+.restaurante-link {
+	border-top-left-radius: 5em;
+	border-top-right-radius: 5em;
+	border-bottom-right-radius: 5em;
+	border-bottom-left-radius: 5em;
+}
+.eventos-link {
+	border-top-left-radius: 5em;
+	border-top-right-radius: 5em;
+	border-bottom-right-radius: 5em;
+	border-bottom-left-radius: 5em;
+}
+
+/* carta del restaurante*/
+.carta-restaurante {
+	text-align: center;
+}
+
+.carta-restaurante p {
+	margin-right: 10em;
+	margin-left: 10em;
+}
+
+.imagen-carta-restaurante {
+	width: 50vw;
+	object-fit: cover;
+	margin: auto;
+	display: block;
+}
+
+@media only screen and (max-width: 767px) {
+	.imagen-carta-restaurante {
+		width: 100vw;
+		object-fit: cover;
+		margin: auto;
+		display: block;
+	}
+}
+
+/* Servicios */
+.servicios {
+	width: 100%;
+}
+
+.servicios div div {
+	width: 100%;
+	background-color: rgb(255, 255, 255);
+}
+
+.servicios div div img {
+	width: 100%;
+	margin: auto;
+	display: block;
+}
+
+.servicios a {
+	color: rgb(0, 0, 0);
+	text-decoration: none;
+	text-align: center;
+	display: block;
+}
+
+.servicios a:hover {
+	color: green;
+}
+
+.imagen-hover {
+	width: 300px;
+}
+
+.imagen-hover:hover {
+	-webkit-transform: scale(1.1);
+	transform: scale(1.1);
+}
+
+.karts {
+	width: 350px !important;
+	height: auto !important;
+}
+
+.accion-img-raton:hover {
+	-webkit-transform: scale(1.1);
+	transform: scale(1.1);
+}
+
+/* Contacto */
+.contacto {
+	background-color: rgb(24, 42, 75, 1.0);
+	text-align: center;
+	padding: 10px 0 75px 0;
+	line-height: 35px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.contacto>div {
+	padding: 0 20px 0 20px;
+}
+
+.contacto a {
+	text-decoration: none;
+	color: rgb(250 205 52);
+}
+
+.contacto a:hover {
+	color: rgb(255, 255, 255);
+}
+
+.contacto p {
+	text-decoration: none;
+	color: rgb(250 205 52);
+}
+
+.contacto h2 {
+	text-decoration: none;
+	color: rgb(250 205 52);
+}
+
+.contacto h3 {
+	text-decoration: none;
+	color: rgb(250 205 52);
+}
+
+.contacto h4 {
+	text-decoration: none;
+	color: rgb(250 205 52);
+}
+
+@media only screen and (max-width: 767px) {
+	.contacto {
+		flex-direction: column;
+	}
+}
+
+@media only screen and (max-width: 479px) {
+	.contacto {
+		flex-direction: column;
+	}
+}
+
+
+/* Footer */
+footer {
+	background-color: rgb(0, 0, 0);
+	color: rgb(255, 255, 255);
+	padding: 15px;
+	width: 100%;
+	text-align: center;
+	position: fixed;
+	bottom: 0;
+}
+
+/* Página restaurante*/
+.platos-restaurante {
+	width: 100%;
+}
+
+section.platos-restaurante div div img {
+	width: 100%;
+	height: 300px;
+	margin: auto;
+	display: block;
+	object-fit: cover;
+}
+
+/* Página donde se describen los karts*/
+section.seccion-desc-kart div {
+	text-align: center;
+	margin: 0 0 60px 0;
+}
+
+section.seccion-desc-kart div p {
+	padding: 10px;
+	max-width: 800px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+section.seccion-desc-kart div img {
+	width: 100%;
+	margin: auto;
+	display: block;
+}
+
+/* Página de eventos*/
+section.calendario div {
+	text-align: center;
+	margin: 0 0 40px 0;
+}
+
+section.calendario div p {
+	padding: 10px;
+}
+
+section.calendario div img {
+	width: 100%;
+	margin: auto;
+	display: block;
+}
+
+
+
+/*Responsive partes completas*/
+@media screen and (min-width: 700px) {
+	/*Servicios*/
+	.servicios div div {
+		background-color: rgb(255, 255, 255);
+	}
+
+	.servicios div div img {
+		width: 500px;
+		height: 350px;
+		object-fit: cover;
+		padding: 20px;
+	}
+
+	.servicios div a {
+		color: rgb(0, 0, 0);
+	}
+
+	.box_1 {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+
+	.box_1 div {
+		flex: 40%;
+		padding: 20px;
+		justify-content: center;
+		align-items: center;
+	}
+
+	/*Cortar*/
+	section.platos-restaurante div div {
+		margin: 20px;
+	}
+
+	section.platos-restaurante div div img {
+		width: 100%;
+		height: 400px;
+		object-fit: cover;
+	}
+
+	.box_3 {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+
+	.box_3 div {
+		flex: 40%;
+		padding: 20px;
+		justify-content: center;
+		align-items: center;
+	}
+
+	/*Seccion para describir a los karts*/
+	section.seccion-desc-kart div div img {
+		width: 500px;
+		object-fit: cover;
+		/*margin: 20px;*/
+	}
+
+	.box_06 {
+		display: flex;
+		/*flex-wrap: wrap;*/
+		align-content: space-around;
+		flex-direction: column;
+		justify-content: center;
+	}
+
+	.box_6 div {
+		flex: 40%;
+		padding: 20px;
+		justify-content: center;
+		align-items: center;
+	}
+
+	/*Calendario*/
+	.calendario div.box_07 {
+		line-height: 40px;
+	}
+
+	.calendario div img.calendario-fotos {
+		width: 900px;
+	}
+
+}
+
+/* /// Ordenadores /// */
+@media screen and (min-width: 1200px) {
+	.calendario div p {
+		padding: 0 30vh;
+	}
+}
+
+
+
+/*TARIFAS*/
+.webtarifas {
+	/*background: #2e2a2a;*/
+	color: #FFF;
+	font-size: 62.5%;
+	font-family: 'Roboto', Arial, Helvetica, Sans-serif, Verdana;
+	margin: 5vh 0 8vh 0;
+}
+
+ul {
+	list-style-type: none;
+}
+
+a {
+	color: rgb(250, 205, 52);
+	text-decoration: none;
+}
+
+.tarifas-tabla-title {
+	text-transform: uppercase;
+	font-weight: 700;
+	font-size: 2.6em;
+	color: #555;
+	margin-top: 15px;
+	text-align: left;
+	margin-bottom: 25px;
+	text-shadow: 0 1px 1px rgba(0, 0, 0, 0.4);
+}
+
+.tarifas-tabla-title a {
+	font-size: 0.6em;
+}
+
+.clearfix:after {
+	content: '';
+	display: block;
+	height: 0;
+	width: 0;
+	clear: both;
+}
+
+/** ========================
+ * Contenedor
+ ============================*/
+.tarifas-wrapper {
+	width: 960px;
+	margin: 40px auto 0;
+}
+
+.tarifas-tabla {
+	margin: 0 10px;
+	text-align: center;
+	width: 300px;
+	float: left;
+	-webkit-box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+	box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+	-webkit-transition: all 0.25s ease;
+	-o-transition: all 0.25s ease;
+	transition: all 0.25s ease;
+}
+
+.tarifas-tabla:hover {
+	-webkit-transform: scale(1.06);
+	-ms-transform: scale(1.06);
+	-o-transform: scale(1.06);
+	transform: scale(1.06);
+}
+
+.tarifas-title {
+	color: #FFF;
+	background: rgb(250, 205, 52);
+	padding: 20px 0;
+	font-size: 2em;
+	text-transform: uppercase;
+	text-shadow: 0 1px 1px rgba(0, 0, 0, 0.4);
+}
+
+.tarifas-tabla.recommended .tarifas-title {
+	background: rgb(250, 205, 52);
+}
+
+.tarifas-tabla.recommended .tarifas-action {
+	background: rgb(250, 205, 52);
+}
+
+.tarifas-tabla .time {
+	background: #403e3d;
+	font-size: 3.4em;
+	font-weight: 700;
+	padding: 20px 0;
+	text-shadow: 0 1px 1px rgba(0, 0, 0, 0.4);
+}
+
+.tarifas-tabla .time sup {
+	font-size: 0.4em;
+	position: relative;
+	left: 5px;
+}
+
+.tabla-list {
+	background: #FFF;
+	color: #403d3a;
+}
+
+.tabla-list li {
+	font-size: 1.4em;
+	font-weight: 700;
+	padding: 12px 8px;
+}
+
+.tabla-list li span {
+	font-weight: 400;
+}
+
+.tabla-list li span.unlimited {
+	color: #FFF;
+	background: rgb(250, 205, 52);
+	font-size: 0.9em;
+	padding: 5px 7px;
+	display: inline-block;
+	-webkit-border-radius: 38px;
+	-moz-border-radius: 38px;
+	border-radius: 38px;
+}
+
+
+.tabla-list li:nth-child(2n) {
+	background: #F0F0F0;
+}
+
+.tabla-comprar {
+	background: #FFF;
+	padding: 15px;
+	text-align: left;
+	overflow: hidden;
+}
+
+.tabla-comprar p {
+	float: left;
+	color: #37353a;
+	font-weight: 700;
+	font-size: 2.4em;
+}
+
+.tabla-comprar p sup {
+	font-size: 0.5em;
+	position: relative;
+	left: 5px;
+}
+
+.tabla-comprar .tarifas-action {
+	float: right;
+	color: #FFF;
+	background: rgb(250, 205, 52);
+	padding: 10px 16px;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	border-radius: 2px;
+	font-weight: 700;
+	font-size: 1.4em;
+	text-shadow: 0 1px 1px rgba(0, 0, 0, 0.4);
+	-webkit-transition: all 0.25s ease;
+	-o-transition: all 0.25s ease;
+	transition: all 0.25s ease;
+}
+
+.tabla-comprar .tarifas-action:hover {
+	background: #cf4f3e;
+}
+
+.recommended .tabla-comprar .tarifas-action:hover {
+	background: #228799;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+	.tarifas-wrapper {
+		width: 768px;
+	}
+
+	.tarifas-tabla {
+		width: 236px;
+	}
+
+	.tabla-list li {
+		font-size: 1.3em;
+	}
+}
+
+@media only screen and (max-width: 767px) {
+	.tarifas-wrapper {
+		width: 420px;
+	}
+
+	.tarifas-tabla {
+		display: block;
+		float: none;
+		margin: 0 0 20px 0;
+		width: 100%;
+	}
+}
+
+@media only screen and (max-width: 479px) {
+	.tarifas-wrapper {
+		width: 300px;
+	}
+}
